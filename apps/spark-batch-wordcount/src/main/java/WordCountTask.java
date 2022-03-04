@@ -12,6 +12,14 @@ import java.util.List;
 public class WordCountTask {
     private static final Logger LOGGER = LoggerFactory.getLogger(WordCountTask.class);
 
+    /* Exécution de l'application JAR dans le container spark
+    spark-submit \
+    --class WordCountTask \
+    --master local \
+    apps/spark-batch-wordcount/target/spark-batch-wordcount-1.jar \
+    data/io/inputs/purchases.txt data/io/outputs/001
+     */
+
     public static void main(String[] args) {
         new WordCountTask().run(args[0], args[1]);
     }
